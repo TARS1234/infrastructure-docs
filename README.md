@@ -5,6 +5,10 @@
 [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Linux-blue)]()
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)]()
 [![LLM](https://img.shields.io/badge/LLM-Ollama%20%7C%20Local-green)]()
+[![Fleet](https://img.shields.io/badge/fleet-5%20nodes%20%7C%20152GB%20RAM-orange)]()
+[![Status](https://img.shields.io/badge/status-production-success)]()
+
+**🔗 Live System:** [agent-central](https://github.com/TARS1234/agent-central) - 59K+ LOC production codebase
 
 ---
 
@@ -18,6 +22,49 @@ This repository contains **production-grade infrastructure documentation** for a
 - ✅ **Multi-model optimization** running 1.5B to 14B parameter models with intelligent resource allocation
 - ✅ **Production reliability** with queue management, priority scheduling, and thermal throttling prevention
 - ✅ **Comprehensive observability** correlating system metrics with agent behavior for performance tuning
+
+> **💡 Note:** This is documentation for an **active production system**. The actual codebase is available at [github.com/TARS1234/agent-central](https://github.com/TARS1234/agent-central) (59K+ LOC)
+
+---
+
+## 🔗 Live Production System
+
+**This documentation describes the actual deployed infrastructure powering the [agent-central](https://github.com/TARS1234/agent-central) platform.**
+
+### agent-central - Multi-Agent Orchestration Platform
+
+**Repository:** [github.com/TARS1234/agent-central](https://github.com/TARS1234/agent-central)
+
+**What it is:**
+- Production multi-agent orchestration platform built from scratch (59,000+ lines of Python)
+- No high-level frameworks (LangChain, AutoGPT) - full control over agent behavior and resource allocation
+- Voice-enabled agents with OpenAI Whisper + Edge-TTS
+- Document processing pipeline (PDF, Word, OCR with multi-layer fallback)
+- Distributed deployment across the 5-node fleet documented here
+
+**Key Features:**
+- **5 specialized agents** with distinct models (1.5B to 14B parameters)
+- **Priority-based dispatcher** with queue management
+- **Stateless extraction service** for parallel document processing
+- **Telegram + Gmail integration** for natural language interaction
+- **Real-time monitoring** via state file integration with llm-monitor
+- **Production optimization** (thread tuning, context management, adaptive chunking)
+
+**Tech Stack:**
+- Python, Flask, Threading/Queue
+- Ollama (local LLM serving)
+- OpenAI Whisper, Edge-TTS
+- PyMuPDF, pytesseract, pdf2image
+- python-telegram-bot, Gmail API
+- paramiko (SSH), psutil (monitoring)
+
+**Performance Results:**
+- ✅ 25% inference speedup through thread count optimization
+- ✅ 30+ minute time savings via stateless extraction architecture
+- ✅ Context explosion solved (15min timeout → 2-5min inference)
+- ✅ Thermal throttling prevention through monitoring-driven tuning
+
+**See the codebase** to understand how the monitoring strategy, performance optimizations, and architecture patterns documented here are implemented in production code.
 
 ---
 
@@ -296,6 +343,19 @@ This documentation demonstrates:
 - [ ] Prometheus/Grafana integration (long-term metrics & dashboards)
 - [ ] Docker Swarm / Kubernetes cluster (container orchestration)
 - [ ] Centralized logging with ELK stack (log aggregation & search)
+
+---
+
+## Related Projects
+
+**[agent-central](https://github.com/TARS1234/agent-central)** - The production multi-agent platform this infrastructure documentation describes. See the actual codebase (59K+ LOC) implementing:
+- Multi-agent orchestration with priority dispatcher
+- Voice capabilities (Whisper + TTS)
+- Document processing pipeline
+- Telegram + Gmail integration
+- Real-time monitoring integration
+
+**[llm-monitor](https://github.com/anthropics/llm-monitor)** - Real-time terminal dashboard for monitoring LLM systems (CPU, GPU, memory, thermals, Ollama processes, agent tracking)
 
 ---
 
