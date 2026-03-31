@@ -8,7 +8,7 @@
 [![Fleet](https://img.shields.io/badge/fleet-5%20nodes%20%7C%20152GB%20RAM-orange)]()
 [![Status](https://img.shields.io/badge/status-production-success)]()
 
-**🔗 Live System:** [agent-central](https://github.com/TARS1234/agent-central) - 59K+ LOC production codebase
+**🔗 Live System:** [agent-central]- 59K+ LOC production codebase
 
 ---
 
